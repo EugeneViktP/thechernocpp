@@ -26,10 +26,13 @@ public:
         value++;
     }
 
-
     void Decrement()
     {
         value--;
+    }
+    void Reset()
+    {
+        value = 0;
     }
 
     int getValue()
@@ -38,28 +41,45 @@ public:
     }
 };
 
-/*oid Increment(int& number)
-{
-    number++;
-}*/
-
 int main()
 {
   
+    int choice;
+    
     Counter counter;
     counter.setValueFromUser();
 
-    std::cout << "Current value is: " << counter.getValue() << std::endl;
-    std::cout << "1 - Increment" << std::endl;
-    std::cout << "2 - Decrement" << std::endl;
-    std::cout << "3 - Quit" << std::endl;
-    std::cout << "Make a choice" << std::endl;
+    while (true)
+    {
+        std::cout << "Current value is: " << counter.getValue() << std::endl;
+        std::cout << "1 - Increment" << std::endl;
+        std::cout << "2 - Decrement" << std::endl;
+        std::cout << "3 - Quit" << std::endl;
+        std::cout << "4 - Reset Value" << std::endl;
+        std::cout << "Make a choice" << std::endl;
+        std::cin >> choice;
+        if (choice == 1)
+        {
+            counter.Increment();
 
+        } else if (choice == 2)
+        {
+            counter.Decrement();
 
-    counter.Increment();
-    std::cout << "Your number is: " << counter.getValue() << std::endl;
+        } else if (choice == 3)
+        {
+            std::cout << "Game is over" << std::endl;
+            break;
+        }
+        else if (choice == 4)
+        {
+            counter.Reset();
 
-    counter.Decrement();
-    std::cout << "Your number is: " << counter.getValue() << std::endl;
-    
+        }
+        
+        else
+        {
+            std::cout << "Make better choice" << std::endl;
+        }
+    }    
 }
