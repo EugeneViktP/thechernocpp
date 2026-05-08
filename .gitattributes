@@ -1,3 +1,4 @@
+# Ignoring assembly
 *.s linguist-generated=true
 *.S linguist-generated=true
 *.inc linguist-generated=true
