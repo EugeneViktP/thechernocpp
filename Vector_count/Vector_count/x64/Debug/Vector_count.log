@@ -1,0 +1,3 @@
+﻿  Vector_count.cpp
+D:\Cpp_projects\Cherno\Vector_count\Vector_count.cpp(10,16): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+  Vector_count.vcxproj -> D:\Cpp_projects\Cherno\Vector_count\x64\Debug\Vector_count.exe
