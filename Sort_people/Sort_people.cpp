@@ -20,12 +20,16 @@ int main()
         people.push_back({ score, name });
     }
 
-    std::sort(people.begin(), people.end());
-    std::reverse(people.begin(), people.end());
+    std::sort(people.begin(), people.end(), [](const auto& a, const auto& b)
+        {
+            if (a.first == b.first)
+                return a.second < b.second;
+            else return a.first > b.first;
+        });
 
     for (const auto& element : people)
     {
-        std::cout << element.second << " "s << std::endl;
+        std::cout << element.second << " "s << element.first << std::endl;
     }
 
     
