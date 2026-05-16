@@ -3,40 +3,37 @@
 
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 class Solution {
 public:
     std::vector<int> twoSum(std::vector<int>& nums, int target) {
-        int l = 0;
-        int r = nums.size() - 1;
-        int sum = 0;
+        
+        std::unordered_map<int, int> m_hash; // <value, index>
+        /*int r = nums.size() - 1;
+        int sum = 0;*/
 
-        while (l < r)
+        for (int i = 0; i < nums.size(); i++)
         {
-            sum = nums[l] + nums[r];
-            if (sum == target)
+            int diff = target - nums[i];
+            if (m_hash.count(diff))
             {
-                std::cout << l << r << std::endl;
-                return { l, r };
+              
+                return { m_hash[diff], i};
             }
-            else if (sum > target)
-            {
-                r--;
-            }
-            else {
-                l++;
-            }
+            m_hash[nums[i]] = i;
         }
-
+        return {};
     }
 };
 
 int main()
 {
     Solution sol;
-    std::vector<int> vec = { 2, 7, 10, 15 };
+    std::vector<int> vec = { 3, 2, 4 };
+    std::vector<int> result = sol.twoSum(vec, 6);
 
-    sol.twoSum(vec, 9);
+    std::cout << result[0] << " " << result[1] << std::endl;
     
     std::cin.get();
 }

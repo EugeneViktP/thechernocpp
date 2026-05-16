@@ -1,4 +1,2 @@
 ﻿  TwoSums.cpp
-D:\Cpp_projects\Cherno\TwoSums\TwoSums.cpp(11,15): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\Cpp_projects\Cherno\TwoSums\TwoSums.cpp(31,1): warning C4715: Solution::twoSum: значение возвращается не при всех путях выполнения
   TwoSums.vcxproj -> D:\Cpp_projects\Cherno\TwoSums\x64\Debug\TwoSums.exe
