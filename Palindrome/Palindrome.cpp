@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 class Solution {
 public:
     bool isPalindrome(std::string s) {
@@ -20,7 +21,14 @@ public:
 
         return true;
     }
+
+    std::string cleanDate(std::string s)
+    {
+        std::string cl = std::tolower(s);
+    }
 };
+
+
 
 int main()
 {
