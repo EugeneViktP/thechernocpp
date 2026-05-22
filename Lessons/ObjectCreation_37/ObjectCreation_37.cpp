@@ -17,11 +17,20 @@ public:
     const String& GetName() const { return m_Name; }
 };
 
+
+
 int main()
 {
-    Entity entity;
-    std::cout << entity.GetName() << std::endl;
-    
+    Entity* e;
+
+    {
+        Entity* entity = new Entity("Cherno");
+        e = entity;
+        std::cout << entity->GetName() << std::endl;
+        
+    }
+
+    delete e;
     std::cin.get();
 }
 
