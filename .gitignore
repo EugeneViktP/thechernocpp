@@ -3,22 +3,28 @@
 *.user
 *.suo
 
-# Результаты сборки
-bin/
-obj/
+# Build directories (any depth)
+x64/
 Debug/
 Release/
-x64/
+Win32/
 x86/
 
-# Файлы сборки
+# Build artifacts (any depth)
 *.exe
-*.dll
-*.lib
-*.obj
 *.pdb
-
-# Временные файлы
-*.tmp
+*.ilk
+*.obj
+*.idb
 *.log
-*.cache
+*.tlog
+*.recipe
+*.lastbuildstate
+*.tlog/
+
+# Specific patterns for your project
+*/x64/
+*/*/x64/
+*/*/Debug/
+*/*/Release/
+EOF
