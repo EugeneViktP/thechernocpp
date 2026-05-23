@@ -1,3 +1,24 @@
+# Visual Studio
 .vs/
+*.user
+*.suo
+
+# Результаты сборки
 bin/
 obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Файлы сборки
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+
+# Временные файлы
+*.tmp
+*.log
+*.cache
