@@ -22,8 +22,9 @@ int main()
     int a = 2;
     int* b = new int[50]; // 200 bytes
 
-    Entity* e = new Entity();
+    Entity* e = new(b) Entity();
     delete e;
+    delete[] b;
     
     std::cin.get();
 }
