@@ -16,6 +16,9 @@ int main()
     lb.AddBook(b2);
     lb.AddBook(b3);
     lb.PrintAll();
+    Book b4("War and Peace4", "Tolstoy", 1869);
+    Book b5 = b4;
+    b5.Print();
 
 
 
