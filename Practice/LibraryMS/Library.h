@@ -14,5 +14,6 @@ public:
 	~Library();
 	void AddBook(const Book& book);
 	void PrintAll() const;
+	void RemoveBook(int index);
 
 };

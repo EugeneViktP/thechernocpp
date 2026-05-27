@@ -11,17 +11,20 @@ int main()
     Book b1("War and Peace", "Tolstoy", 1869);
     Book b2("War and Peace2", "Tolstoy", 1870);
     Book b3("War and Peace3", "Tolstoy", 1871);
+
     Library lb(3);
     lb.AddBook(b1);
     lb.AddBook(b2);
     lb.AddBook(b3);
+
+    std::cout << "All books:" << std::endl;
     lb.PrintAll();
-    Book b4("War and Peace4", "Tolstoy", 1869);
-    Book b5 = b4;
-    b5.Print();
 
+    std::cout << "\nRemoving index 1..." << std::endl;
+    lb.RemoveBook(1);
 
-
+    std::cout << "\nRemaining books:" << std::endl;
+    lb.PrintAll();
 
     std::cin.get();
 }
