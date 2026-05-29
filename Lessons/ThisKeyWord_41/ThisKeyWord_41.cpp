@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-//void PrintEntity(Entity* e);
+void PrintEntity(Entity* e);
 
 class Entity
 {
@@ -14,7 +14,7 @@ public:
     {
         this->x = x;
         this->y = y;
-        PrintEntity();
+        PrintEntity(this);
     }
 
     int GetX() const
