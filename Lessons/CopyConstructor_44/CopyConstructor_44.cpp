@@ -55,7 +55,7 @@ struct Vector2
 };
 
 
-void PrintString(String string)
+void PrintString(const String& string)
 {
     std::cout << string << std::endl;
 }
