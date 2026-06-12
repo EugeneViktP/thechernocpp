@@ -23,6 +23,7 @@ public:
     String(const String& other)
         :m_Size(other.m_Size)
     {
+        std::cout << "Copied String!" << std::endl;
         m_Buffer = new char[m_Size + 1];
         memcpy(m_Buffer, other.m_Buffer, m_Size + 1);
     }
@@ -54,6 +55,11 @@ struct Vector2
 };
 
 
+void PrintString(String string)
+{
+    std::cout << string << std::endl;
+}
+
 
 int main()
 {
@@ -63,8 +69,12 @@ int main()
 
     second[2] = 'a';
 
-    std::cout << string << std::endl;
-    std::cout << second << std::endl;
+    /*std::cout << string << std::endl;
+    std::cout << second << std::endl;*/
+
+    PrintString(string);
+    PrintString(second);
+
 
 
 
