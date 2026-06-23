@@ -17,6 +17,12 @@ std::ostream& operator<<(std::ostream& stream, const Vertex& vertex)
     return stream;
 }
 
+void Function(const std::vector<Vertex>& vertices)
+{
+
+}
+
+
 int main()
 {
     //Vertex* vertices = new Vertex[5];
